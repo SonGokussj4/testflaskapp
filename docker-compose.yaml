@@ -1,0 +1,16 @@
+version: '2.1'
+services:
+
+  app:
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    restart: always
+    #image: dockerizedflaskapp
+    build: .
+    #container_name: myFlaskApp
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
+
